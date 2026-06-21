@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(mac-monitor LANGUAGES CXX)
+project(asmtop LANGUAGES CXX)
 
 # 设置C++17标准
 set(CMAKE_CXX_STANDARD 17)
@@ -41,16 +41,16 @@ set(SOURCES
 )
 
 # 生成可执行文件
-add_executable(mac-monitor ${SOURCES})
+add_executable(asmtop ${SOURCES})
 
 # 链接FTXUI库
-target_link_libraries(mac-monitor
+target_link_libraries(asmtop
     PRIVATE ftxui::component
     PRIVATE ftxui::dom
     PRIVATE ftxui::screen
 )
 
 # 设置输出目录
-set_target_properties(mac-monitor PROPERTIES
+set_target_properties(asmtop PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
