@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(rm -rf ./*)",
+      "Bash(/opt/homebrew/bin/cmake ..)",
+      "Bash(make)",
+      "Bash(/Users/zhongyijiang/Desktop/test/claudeTest/build/bin/mac-monitor --help)",
+      "Bash(clang++ -std=c++17 test_permission.cpp src/utils/permission.cpp -o test_permission)",
+      "Bash(./test_permission)"
+    ]
+  }
+}

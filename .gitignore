@@ -1,0 +1,82 @@
+# macOS系统自动生成文件
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# C++编译和构建产物
+build/
+cmake-build-*/
+out/
+bin/
+obj/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# CMake生成文件
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+_builds/
+*/.cmake/
+
+# 项目可执行文件
+mac-monitor
+macmon
+silicon-monitor
+
+# 临时文件和日志
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+
+# IDE配置文件
+.vscode/
+.idea/
+*.xcodeproj
+*.xcworkspace
+*.user
+*.user.*
+.vs/
+
+# 第三方依赖（如果用本地安装的话）
+include/nlohmann/
+lib/
+
+# 测试输出
+tests/test_*
+*.gcov
+*.gcda
+*.gcno
+
+# 其他
+Thumbs.db
+*.tar.gz
+*.zip
+*.dmg

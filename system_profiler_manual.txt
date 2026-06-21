@@ -1,0 +1,69 @@
+SYSTEM_PROFILER(8)          System Manager's Manual         SYSTEM_PROFILER(8)
+
+NNAAMMEE
+     ssyysstteemm__pprrooffiilleerr – reports system hardware and software configuration.
+
+SSYYNNOOPPSSIISS
+     ssyysstteemm__pprrooffiilleerr [--uussaaggee]
+     ssyysstteemm__pprrooffiilleerr [--lliissttDDaattaaTTyyppeess]
+     ssyysstteemm__pprrooffiilleerr [--xxmmll] _d_a_t_a_T_y_p_e_1 _._._. _d_a_t_a_T_y_p_e_N
+     ssyysstteemm__pprrooffiilleerr [--xxmmll] [--ddeettaaiillLLeevveell _l_e_v_e_l]
+     ssyysstteemm__pprrooffiilleerr [--jjssoonn] _d_a_t_a_T_y_p_e_1 _._._. _d_a_t_a_T_y_p_e_N
+     ssyysstteemm__pprrooffiilleerr [--jjssoonn] [--ddeettaaiillLLeevveell _l_e_v_e_l]
+
+DDEESSCCRRIIPPTTIIOONN
+     ssyysstteemm__pprrooffiilleerr reports on the hardware and software configuration of the
+     system.  It can generate plain text reports or XML reports which can be
+     opened with System Information.app, or JSON reports
+
+     Progress and error messages are printed to stderr while actual report
+     data is printed to stdout.  Redirect stderr to /dev/null to suppress
+     progress and error messages.
+
+     The following options are available:
+
+     --xxmmll                Generates a report in XML format.  If the XML report
+                         is redirected to a file with a ".spx" suffix that
+                         file can be opened with System Information.app.
+
+     --jjssoonn               Generates a report in JSON format.
+
+     --lliissttDDaattaaTTyyppeess      Lists the available datatypes.
+
+     --ddeettaaiillLLeevveell _l_e_v_e_l  Specifies the level of detail for the report:
+
+                         mini          report with no personal information
+
+                         basic         basic hardware and network information
+
+                         full          all available information
+
+     --ttiimmeeoouutt            Specifies the maximum time to wait in seconds for
+                         results.  If some information is not available within
+                         the specified time limit then an incomplete or
+                         partial report will be generated.  The default
+                         timeout is 180 seconds.  Specifying a timeout of 0
+                         means no timeout.
+
+     --uussaaggee              Prints usage info and examples.
+
+EEXXAAMMPPLLEESS
+     ssyysstteemm__pprrooffiilleerr
+       Generates a text report with the standard detail level.
+
+     ssyysstteemm__pprrooffiilleerr -detailLevel mini
+       Generates a short report containing no personal information.
+
+     ssyysstteemm__pprrooffiilleerr -listDataTypes
+       Shows a list of the available data types.
+
+     ssyysstteemm__pprrooffiilleerr SPSoftwareDataType SPNetworkDataType
+       Generates a text report containing only software and network data.
+
+     ssyysstteemm__pprrooffiilleerr -xml > MyReport.spx
+       Creates a XML file which can be opened by System Profiler.app
+
+AAUUTTHHOORRSS
+     Apple Inc.
+
+Darwin                           June 30, 2003                          Darwin
